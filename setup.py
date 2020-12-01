@@ -3,16 +3,19 @@ from setuptools import setup, find_packages
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
 
+package_data = {"ramsmod": ["datasets/*"]}
+
 setup(
   name = 'ramsmod',
   packages = find_packages(exclude=['*.tests',]),
-  version = '0.6',      # Start with a small number and increase it with every change you make
+  package_data = package_data,
+  version = '0.6.2',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Python 3 library for reliability data analysis',   # Give a short description about your library
   author = 'Sean Reed',                   # Type in your name
   author_email = 'sean@sean-reed.com',      # Type in your E-Mail
   url = 'https://github.com/user/sean-reed',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/sean-reed/ramsmod/archive/v0.6.tar.gz',
+  download_url = 'https://github.com/sean-reed/ramsmod/archive/v0.6.2.tar.gz',
   install_requires= requirements,
   classifiers=[
         "Development Status :: 4 - Beta",
