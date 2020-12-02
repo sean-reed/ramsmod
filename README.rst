@@ -4,6 +4,7 @@ A library for analysing reliability data that was developed
 to support the RAMS modelling course at Örebro University.
 
 E.g.
+
 .. code-block:: python
 
     from ramsmod.datasets import load_right_censored
@@ -12,6 +13,7 @@ E.g.
     data = load_right_censored()
     km_table = kaplan_meier_fit(data['t'], data['d'])
     print(km_table)
+
 
 Features
 --------
