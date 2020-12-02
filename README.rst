@@ -6,8 +6,8 @@ to support the RAMS modelling course at Örebro University.
 E.g.
 .. code-block:: python
 
-    from ramsmod.rdata.datasets import load_right_censored
-    from ramsmod.rdata.fitting import kaplan_meier_fit
+    from ramsmod.datasets import load_right_censored
+    from ramsmod.fitting import kaplan_meier_fit
 
     data = load_right_censored()
     km_table = kaplan_meier_fit(data['t'], data['d'])
